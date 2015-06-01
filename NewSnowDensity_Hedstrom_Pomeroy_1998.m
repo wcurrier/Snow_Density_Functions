@@ -17,11 +17,17 @@ function newSnowDensity = NewSnowDensity_Hedstrom_Pomeroy_1998(...
 %   newSnowDensity = NewSnowDensity_Hedstrom_Pomeroy_1998(newSnowDenMin,newSnowDenMult,newSnowDenScal,airtemp)
 % 
 % INPUTS
-% newSnowDenMin     - Mx1 minimum new snow density, where N is each time
-% step, and M is for each paramter combination
-% newSnowDenMult    - Qx1 multiplier for new snow density         
-% newSnowDenScal    - Rx1 scaling factor for new snow density       
+% newSnowDenMin     - Mx1 minimum new snow density  (kg m-3), where N is each time
+%                       step, and M is for each paramter combination
+% newSnowDenMult    - Qx1 multiplier for new snow density (kg m-3)         
+% newSnowDenScal    - Rx1 scaling factor for new snow density (K)      
 % airtemp           - MxQxRxNAir temperature (K)
+%
+% Parameter limits within SUMMA
+% Paramter             Default        Min           Max
+% newSnowDenMin   =    100.0000;      50.0000       100.0000 
+% newSnowDenMult  =    100.0000;      25.0000       75.0000
+% newSnowDenScal  =    5.0000;        1.0000        5.0000
 %
 % OUTPUTS
 % newSnowDensity = Density of newly fallen snow over intput timestep (kg m-3)
