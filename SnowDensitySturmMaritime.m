@@ -8,7 +8,7 @@ function Rho = SnowDensitySturmMaritime(t,z)
 if size(z,1)>size(z,2),
     z=z';
 end
-%blahhhhh
+
 %convert depth in mm to cm
 z=z./10;
 
