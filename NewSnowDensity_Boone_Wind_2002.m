@@ -27,7 +27,7 @@ function newSnowDensity = NewSnowDensity_Boone_Wind_2002(...
 % b_sn              - coeffecient (kg m-3 k-1)
 % c_sn              - coeffecient [kg m-(7/2) s-(1/2)]
 % airtemp           - Air temperature (K)
-% wind_speed        - Wind Speed (m/s)
+% wind_speed        - Wind Speed (m/s) at height X ???
 % Tfreeze           - Freezing Temperature of liquid water (K)
 
 % The Dependence on wind speed is to suggest that the higher the windspeed
@@ -62,6 +62,6 @@ end
 
 % Check limits of density (can be exceded with given range of parameter
 % space!)
-newSnowDensity(newSnowDensity>900) = 900; % defined as ice
+newSnowDensity(newSnowDensity>917) = 917; % defined as ice
 newSnowDensity(newSnowDensity<50) = 50; % Limit of fresh snow density based on Boone 2002
 

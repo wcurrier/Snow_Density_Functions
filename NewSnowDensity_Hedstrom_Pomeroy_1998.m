@@ -29,6 +29,11 @@ function newSnowDensity = NewSnowDensity_Hedstrom_Pomeroy_1998(...
 % newSnowDenMult  =    100.0000;      25.0000       75.0000
 % newSnowDenScal  =    5.0000;        1.0000        5.0000
 %
+% Paramter values from Hedstrom and Pomeroy 1998
+% newSnowDenMin   =    67.92;
+% newSnowDenMult  =    51.25;
+% newSnowDenScal  =    2.59;
+%
 % OUTPUTS
 % newSnowDensity = Density of newly fallen snow over intput timestep (kg m-3)
 % 
@@ -39,6 +44,7 @@ function newSnowDensity = NewSnowDensity_Hedstrom_Pomeroy_1998(...
 
 % Constants
 Tfreeze = 273.16; % Freezing temperature of water
+Den_ice = 917; % Density of ice (kg m-3)
 
 for a = 1:length(newSnowDenMin)
     for b = 1:length(newSnowDenMult)
@@ -50,8 +56,8 @@ end
 
 % Check limits of density (can be exceded with given range of parameter
 % space!)
-newSnowDensity(newSnowDensity>900) = 900; % defined as ice
-newSnowDensity(newSnowDensity<1) = 1; 
+newSnowDensity(newSnowDensity>Den_ice) = Den_ice; 
+newSnowDensity(newSnowDensity<50) = 50; 
 
 
 
