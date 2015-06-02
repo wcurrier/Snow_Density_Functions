@@ -44,7 +44,7 @@ function newSnowDensity = NewSnowDensity_Anderson(...
 % newSnowDensity = Density of newly fallen snow over input timestep (kg m-3)
 % 
 % SCRIPTS REQUIRED
-%  nones
+%  none
 
 %% Code %%
 
@@ -75,5 +75,5 @@ end
 
 % Check limits of density (can be exceded with given range of parameter
 % space!)
-newSnowDensity(newSnowDensity>900) = 900; % defined as ice
+newSnowDensity(newSnowDensity>917) = 917; % defined as ice
 newSnowDensity(newSnowDensity<50) = 50; % Limit of fresh snow density
