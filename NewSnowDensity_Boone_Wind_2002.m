@@ -8,11 +8,18 @@ function newSnowDensity = NewSnowDensity_Boone_Wind_2002(...
 % possible combinations are computed and returned. Suggested Parameters are
 % taken from Boone 2002 described on page 27.
 
+% EDIT - Values actualy come from Pahaut (1976) at Col de Porte (1325 m altitude, French Alps)
+% Equation used in CROCUS
+% Pahaut, E.: La metamorphose des cristaux de neige (Snow crys- Â´
+% tal metamorphosis), 96, Monographies de la MetÂ´ eorologie Na- Â´
+% tionale, MetÂ´ eo France, 1976. 
+
+
 % Boone A. Description du schema de neige ISBA-ES (Explicit Snow). Centre
-% National de REcherches Métérologiques, Météo-France, Toulouse, 2002.
+% National de REcherches MÃ©tÃ©rologiques, MÃ©tÃ©o-France, Toulouse, 2002.
 % Available from: http://www.cnrm.meteo.fr.IMG/pdf/snowdoc.pdf.
 
-% Essery R., S. Morin , Y. Lejeune, C. B. Ménard, 2013: A comparison of
+% Essery R., S. Morin , Y. Lejeune, C. B. MÃ©nard, 2013: A comparison of
 % 1701 snow models using observations from an alpine site. Adv. Water
 % Resour. 55, 131-148
 % 
