@@ -5,10 +5,9 @@ function newSnowDensity = NewSnowDensity_Boone_Wind_2002(...
 % density!), based on air temperature and wind speed along with three 
 % paramaters. Crocus, HTESSEL and the ISBA-ES model use the following 
 % parameters (Essery et al. 2013). If multiple parameters are specified, all
-% possible combinations are computed and returned. Suggested Parameters are
-% taken from Boone 2002 described on page 27.
+% possible combinations are computed and returned.
 
-% EDIT - Values actualy come from Pahaut (1976) at Col de Porte (1325 m altitude, French Alps)
+% Parameter values come from Pahaut (1976) who took empirical observations at Col de Porte (1325 m altitude, French Alps)
 % Equation used in CROCUS
 % Pahaut, E.: La metamorphose des cristaux de neige (Snow crys- ´
 % tal metamorphosis), 96, Monographies de la Met´ eorologie Na- ´
