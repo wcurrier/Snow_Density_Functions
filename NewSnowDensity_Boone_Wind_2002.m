@@ -5,14 +5,20 @@ function newSnowDensity = NewSnowDensity_Boone_Wind_2002(...
 % density!), based on air temperature and wind speed along with three 
 % paramaters. Crocus, HTESSEL and the ISBA-ES model use the following 
 % parameters (Essery et al. 2013). If multiple parameters are specified, all
-% possible combinations are computed and returned. Suggested Parameters are
-% taken from Boone 2002 described on page 27.
+% possible combinations are computed and returned.
+
+% Parameter values come from Pahaut (1976) who took empirical observations at Col de Porte (1325 m altitude, French Alps)
+% Equation used in CROCUS
+% Pahaut, E.: La metamorphose des cristaux de neige (Snow crys- Â´
+% tal metamorphosis), 96, Monographies de la MetÂ´ eorologie Na- Â´
+% tionale, MetÂ´ eo France, 1976. 
+
 
 % Boone A. Description du schema de neige ISBA-ES (Explicit Snow). Centre
-% National de REcherches Métérologiques, Météo-France, Toulouse, 2002.
+% National de REcherches MÃ©tÃ©rologiques, MÃ©tÃ©o-France, Toulouse, 2002.
 % Available from: http://www.cnrm.meteo.fr.IMG/pdf/snowdoc.pdf.
 
-% Essery R., S. Morin , Y. Lejeune, C. B. Ménard, 2013: A comparison of
+% Essery R., S. Morin , Y. Lejeune, C. B. MÃ©nard, 2013: A comparison of
 % 1701 snow models using observations from an alpine site. Adv. Water
 % Resour. 55, 131-148
 % 
@@ -27,7 +33,7 @@ function newSnowDensity = NewSnowDensity_Boone_Wind_2002(...
 % b_sn              - coeffecient (kg m-3 k-1)
 % c_sn              - coeffecient [kg m-(7/2) s-(1/2)]
 % airtemp           - Air temperature (K)
-% wind_speed        - Wind Speed (m/s)
+% wind_speed        - Wind Speed (m/s) at height X ???
 % Tfreeze           - Freezing Temperature of liquid water (K)
 
 % The Dependence on wind speed is to suggest that the higher the windspeed
@@ -62,6 +68,6 @@ end
 
 % Check limits of density (can be exceded with given range of parameter
 % space!)
-newSnowDensity(newSnowDensity>900) = 900; % defined as ice
+newSnowDensity(newSnowDensity>917) = 917; % defined as ice
 newSnowDensity(newSnowDensity<50) = 50; % Limit of fresh snow density based on Boone 2002
 
